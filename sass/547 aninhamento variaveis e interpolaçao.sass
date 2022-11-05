@@ -1,0 +1,40 @@
+/*Aninhamento, 1:00*/
+/*Referenciar Seletor pai 5:00*/
+#conteudo
+    background: green
+    padding:15px
+    h1,h2
+        color: black
+    a
+        color: red
+        &:hover
+            color: yellow
+
+/*Variáveis 10:00*/
+$cor-primaria: blue
+$tamanho-titulo: 20px
+
+h2
+    color: $cor-primaria
+
+h3
+    color: $cor-primaria
+    
+
+/*Escopo das Variaveis 12:40*/
+$cor-padrao: orange
+#rodape
+    $cor-padrao: green !global
+    background-color: $cor-padrao
+    
+h2
+    color: $cor-padrao
+
+
+/*Interpolação 16:40*/
+$classe: red
+$classe: vermelho
+$color: color
+
+.#{$classe}
+    #{$color}: $classe
