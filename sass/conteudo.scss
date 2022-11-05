@@ -1,0 +1,64 @@
+//LOOPS for
+// to
+@for $i from 1 to 3 {
+  .item-#{$i} {
+      background: green;
+      margin-bottom: 2px;
+  }
+}
+
+// through
+@for $i from 1 through 3 {
+  .item-#{$i} {
+      background: green;
+      margin-bottom: 2px;
+  }
+}
+
+//while
+$contador: 1;
+@while $contador <5{
+    .item-#{$contador} {
+      background: red;
+      margin-bottom: 2px;
+    }
+    $contador: $contador + 1;
+}
+
+//each
+$lista: green, yellow, red;
+$contador: 1;
+
+@each $cor in $lista{
+    
+    .item-#{$contador} {
+      background: $cor;
+      margin-bottom: 2px;
+    }
+    
+    $contador: $contador+1;
+}
+
+//funções
+$total: 12;
+@function largura-coluna($coluna){
+    
+    @return ($coluna/$total) * 100;
+    
+}
+$resultado: largura-coluna(12);
+/*
+#{$resultado}
+*/
+
+//funções2 nativas
+$total: 12;
+@function largura-coluna($coluna){
+    
+    @return percentage($coluna/$total);
+    
+}
+$resultado: largura-coluna(12);
+/*
+#{$resultado}
+*/
