@@ -58,7 +58,27 @@ $total: 12;
     @return percentage($coluna/$total);
     
 }
-$resultado: largura-coluna(12);
-/*
-#{$resultado}
-*/
+
+
+@for $i from 1 to $total {
+  .col-#{$i} {
+      width: largura-coluna($i);
+      background: green;
+  }
+}
+
+//Outras funções
+.alerta1{
+    background: mix(green, yellow,20%);
+    color: yellow;
+}
+
+.alerta2{
+    background: darken(orange, 33);
+    color: yellow;
+}
+
+.alerta3{
+    background: lighten(orange, 30);
+    color: yellow;
+}
