@@ -10,12 +10,17 @@ h2 {
   padding: 10px 5px;
 }
 
-.classe1, .vermelho {
+.pai, .filho, .erro {
   color: red;
 }
 
-.classe2, .vermelho {
+.filho, .erro {
   background: black;
+}
+
+.erro {
+  padding: 10px;
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=estilo.css.map */

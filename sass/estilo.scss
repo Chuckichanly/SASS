@@ -16,13 +16,15 @@ h2{
 //Herança
 //Multiplas diretivas
 
-.classe1{
+.pai{
   color:red;
 }
-.classe2{
+.filho{
+  @extend .pai;
   background:black;
 }
-.vermelho{
-  @extend .classe2;
-  @extend .classe1;
+.erro{
+  @extend .filho;
+  padding:10px;
+  border:1px solid red;
 }
