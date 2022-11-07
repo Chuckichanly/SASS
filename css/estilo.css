@@ -1,26 +1,56 @@
-h1 {
-  color: white;
-  background: black;
-  padding: 10px 5px;
+@charset "UTF-8";
+/* //Mixin
+@mixin titulo($cor, $cor-bg:black){
+  color:$cor;
+  background:$cor-bg;
+  padding:10px 5px;
 }
 
-h2 {
-  color: blue;
-  background: black;
-  padding: 10px 5px;
+h1{
+  @include titulo(white );
 }
 
-.pai, .filho, .erro {
-  color: red;
+h2{
+  @include titulo(blue );
 }
 
-.filho, .erro {
-  background: black;
+//Herança
+//Multiplas diretivas
+//% Placeholder (%class) serve para nao criar a classe no arquivo.css
+%pai{
+  color:red;
+}
+%filho{
+  @extend %pai;
+  background:black;
+}
+.erro{
+  @extend %filho;
+  padding:10px;
+  border:1px solid red;
 }
 
-.erro {
-  padding: 10px;
-  border: 1px solid red;
+//Diretivas de Controle
+
+$cor:grey;
+
+@if($cor == green){
+  p{
+    color:$cor;
+  }
+}@else if($cor == red){
+  p{
+    color:$cor;
+  }
+}@else{
+  p{
+    color:black;
+  }
+}
+ */
+body {
+  background: cyan;
+  color: purple;
 }
 
 /*# sourceMappingURL=estilo.css.map */

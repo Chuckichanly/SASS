@@ -1,4 +1,4 @@
-//Mixin
+/* //Mixin
 @mixin titulo($cor, $cor-bg:black){
   color:$cor;
   background:$cor-bg;
@@ -15,16 +15,54 @@ h2{
 
 //Herança
 //Multiplas diretivas
-
-.pai{
+//% Placeholder (%class) serve para nao criar a classe no arquivo.css
+%pai{
   color:red;
 }
-.filho{
-  @extend .pai;
+%filho{
+  @extend %pai;
   background:black;
 }
 .erro{
-  @extend .filho;
+  @extend %filho;
   padding:10px;
   border:1px solid red;
+}
+
+//Diretivas de Controle
+
+$cor:grey;
+
+@if($cor == green){
+  p{
+    color:$cor;
+  }
+}@else if($cor == red){
+  p{
+    color:$cor;
+  }
+}@else{
+  p{
+    color:black;
+  }
+}
+ */
+//Diretivas de Controle e Mixins
+
+@mixin tema($tema:padrao){
+  @if($tema == natal){
+    background: red;
+    color: white;
+  }@else if($tema == blackfriday){
+    background: black;
+    color: grey; 
+  }@else{
+    background: cyan;
+    color: purple; 
+
+  }
+}
+
+body{
+  @include tema(pepe);
 }
