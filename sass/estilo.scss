@@ -1,10 +1,15 @@
-// for loop: through
-@import '_variaveis.scss';
-@import 'mixin';
+//Mixin
+@mixin titulo{
+  background:black;
+  padding:10px 5px;
+}
 
-@for $i from 1 through 3 {
-  .item-#{$i} {
-      background: $cor-principal;
-      margin-bottom: 2px;
-  }
+h1{
+  color:white;
+  @include titulo;
+}
+
+h2{
+  color:yellow;
+  @include titulo;
 }

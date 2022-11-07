@@ -1,16 +1,13 @@
-.item-1 {
-  background: green;
-  margin-bottom: 2px;
+h1 {
+  color: white;
+  background: black;
+  padding: 10px 5px;
 }
 
-.item-2 {
-  background: green;
-  margin-bottom: 2px;
-}
-
-.item-3 {
-  background: green;
-  margin-bottom: 2px;
+h2 {
+  color: yellow;
+  background: black;
+  padding: 10px 5px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
