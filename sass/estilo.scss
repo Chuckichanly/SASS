@@ -12,3 +12,17 @@ h1{
 h2{
   @include titulo(blue );
 }
+
+//Herança
+//Multiplas diretivas
+
+.classe1{
+  color:red;
+}
+.classe2{
+  background:black;
+}
+.vermelho{
+  @extend .classe2;
+  @extend .classe1;
+}

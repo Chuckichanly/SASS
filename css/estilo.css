@@ -10,4 +10,12 @@ h2 {
   padding: 10px 5px;
 }
 
+.classe1, .vermelho {
+  color: red;
+}
+
+.classe2, .vermelho {
+  background: black;
+}
+
 /*# sourceMappingURL=estilo.css.map */
