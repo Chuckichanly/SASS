@@ -1,14 +1,14 @@
 //Mixin
-@mixin titulo($cor, $cor-bg){
+@mixin titulo($cor, $cor-bg:black){
   color:$cor;
   background:$cor-bg;
   padding:10px 5px;
 }
 
 h1{
-  @include titulo(white, black);
+  @include titulo(white );
 }
 
 h2{
-  @include titulo(blue, black);
+  @include titulo(blue );
 }
